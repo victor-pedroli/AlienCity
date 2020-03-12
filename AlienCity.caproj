@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>AlienCity</name>
+    <description>Game Alien City</description>
+    <version>1.0.0.0</version>
+    <author>Kleber Petry</author>
+    <author-email>kleberpetry@gmail.com</author-email>
+    <author-website>http://senaipr.org.br</author-website>
+    <app-id>com.senai.myapp</app-id>
+    <unique-id>204464236bjbk</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Layout 1</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="heroi" sid="854162139206523">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="104282880500482">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="369090040589243">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="509526605437100" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="base" sid="803438206403463">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="298354281784663">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580343521440115" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="animationhero" sid="757791855985090">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="852128775625490">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="0" repeatto="0" sid="826898677393658" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_stand.png">
+                        <collision-poly>
+                            <point x="0.151515" y="0.108696" />
+                            <point x="0.5" y="0" />
+                            <point x="0.80303" y="0.173913" />
+                            <point x="0.863636" y="0.543478" />
+                            <point x="0.848485" y="0.891305" />
+                            <point x="0.469697" y="0.978261" />
+                            <point x="0.196969" y="0.967391" />
+                            <point x="0.0151515" y="0.48913" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="11" loop="1" name="andando" pingpong="0" repeatcount="0" repeatto="0" sid="812806384656461" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk11.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="pulando" pingpong="0" repeatcount="0" repeatto="0" sid="615699483521008" speed="0">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_jump.png">
+                        <collision-poly>
+                            <point x="0.149254" y="0.106383" />
+                            <point x="0.492537" y="0" />
+                            <point x="0.850746" y="0.106383" />
+                            <point x="0.925373" y="0.5" />
+                            <point x="0.865672" y="0.904255" />
+                            <point x="0.492537" y="0.882979" />
+                            <point x="0.223881" y="0.840426" />
+                            <point x="0.0447761" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="0" repeatto="0" sid="324826350732722" speed="0">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_hurt.png">
+                        <collision-poly>
+                            <point x="0.15942" y="0.119565" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.855072" y="0.108696" />
+                            <point x="0.942029" y="0.5" />
+                            <point x="0.913043" y="0.934783" />
+                            <point x="0.492754" y="0.98913" />
+                            <point x="0.231884" y="0.826087" />
+                            <point x="0.0869565" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo" sid="939136079719026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985068838680973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="moeda" sid="542950026462152">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522740613446473" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.473684" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Items\coinGold.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="placar" sid="409028127313089">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="coracao" sid="388044294056197">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="514217248284094">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="vida" pingpong="0" repeatcount="0" repeatto="0" sid="649691447301202" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="989115128284656">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="TiledBackground" sid="533543225261861">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grass.png" />
+        </object-type>
+        <object-type name="TiledBackground2" sid="457340947025676">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter_rounded.png" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="751002040724715">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="115667839341514">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground4" sid="772152701692322">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="757201486423269">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalf.png" />
+        </object-type>
+        <object-type name="TiledBackground5" sid="848075380285558">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassLeft.png" />
+        </object-type>
+        <object-type name="TiledBackground6" sid="856262717210792">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="304566205020553">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground7" sid="732176644768443">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalf.png" />
+        </object-type>
+        <object-type name="TiledBackground8" sid="387528855875759">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="885826807228784">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalfMid.png" />
+        </object-type>
+        <object-type name="TiledBackground9" sid="646691800656427">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground10" sid="737097366735035">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridge.png" />
+        </object-type>
+        <object-type name="TiledBackground11" sid="728756664141354">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridge.png" />
+        </object-type>
+        <object-type name="Sprite" sid="777598002903176">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="468879113840788">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="234136987855356" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridge.png">
+                        <collision-poly>
+                            <point x="0.714286" y="0.714286" />
+                            <point x="0.285714" y="0.714286" />
+                            <point x="0.971429" y="0.971429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0285714" y="0.971429" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground12" sid="506240377685725">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter_rounded.png" />
+        </object-type>
+        <object-type name="TiledBackground13" sid="232702434804776">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground14" sid="480941826911494">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalfLeft.png" />
+        </object-type>
+        <object-type name="TiledBackground15" sid="734212760497208">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground16" sid="941430633868284">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="864907354993514">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalf.png" />
+        </object-type>
+        <object-type name="TiledBackground17" sid="828781138494277">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffRight.png" />
+        </object-type>
+        <object-type name="Sprite2" sid="522708004423037">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677704245370469" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="305165671276004">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="897843457761710" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="335447431104708">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="778623860207075" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffRightAlt.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="0.728571" y="0.5" />
+                            <point x="0.5" y="0.728571" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="583793499095629">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="258978093090104">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520167062211587" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffRight.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="0.971429" y="0.5" />
+                            <point x="0.771429" y="0.771429" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EspinhoGrande" sid="975674639926565">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="511371591839710">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Items\spikes.png" />
+        </object-type>
+        <object-type name="TiledBackground19" sid="493816115209341">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="993827202689874">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png" />
+        </object-type>
+        <object-type name="TiledBackground20" sid="885497378592297">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground21" sid="906236231478614">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grass.png" />
+        </object-type>
+        <object-type name="TiledBackground22" sid="416445863163743">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="275434063650534">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalf.png" />
+        </object-type>
+        <object-type name="TiledBackground23" sid="927507014544478">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grass.png" />
+        </object-type>
+        <object-type name="TiledBackground24" sid="265659982958239">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="941520066554485">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalf.png" />
+        </object-type>
+        <object-type name="Sprite6" sid="956328488339729">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="208062180676064">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494670470184326" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.642857" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.957143" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0428571" y="0.957143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="878100443298090">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="724352983297949">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="288169062489866" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.642857" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.957143" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0428571" y="0.957143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="415846481752417">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="414809276268422">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175190685769810" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffRightAlt.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="0.728571" y="0.5" />
+                            <point x="0.5" y="0.728571" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground25" sid="499817594661696">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeft.png" />
+        </object-type>
+        <object-type name="TiledBackground26" sid="894692483157734">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite9" sid="637385598887557">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="608134347337472">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656372092274082" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeftAlt.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.742857" />
+                            <point x="0.385714" y="0.614286" />
+                            <point x="0.271429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground27" sid="929129414332828">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassRight.png" />
+        </object-type>
+        <object-type name="TiledBackground28" sid="123155974886846">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassHalfMid.png" />
+        </object-type>
+        <object-type name="TiledBackground29" sid="305825649339646">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="799146735195171">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassMid.png" />
+        </object-type>
+        <object-type name="Sprite10" sid="704820888277313">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="106833956112376">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760108241634347" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffRight.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.971429" y="0.0285714" />
+                            <point x="0.971429" y="0.5" />
+                            <point x="0.771429" y="0.771429" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="107087968242586">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="528611219112160">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="866016552402303">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381305415886197" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.642857" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.957143" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0428571" y="0.957143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite12" sid="764112088527713">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="291526611880232">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="902791097623079">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="146157316359866" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridgeLogs.png">
+                        <collision-poly>
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.642857" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.957143" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0428571" y="0.957143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite13" sid="629062324079825">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="889259219638883">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520635966669421" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeftAlt.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.742857" />
+                            <point x="0.385714" y="0.614286" />
+                            <point x="0.271429" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground30" sid="241921585663047">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground31" sid="858921241260207">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="241993798641527">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grass.png" />
+        </object-type>
+        <object-type name="TiledBackground32" sid="197511071891003">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\liquidWaterTop_mid.png" />
+        </object-type>
+        <object-type name="TiledBackground33" sid="452669353404563">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeftAlt.png" />
+        </object-type>
+        <object-type name="Sprite14" sid="303747680594639">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772752023766183" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeftAlt.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground34" sid="217359621133118">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCenter.png" />
+        </object-type>
+        <object-type name="TiledBackground35" sid="538635925468777">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="710396941364637">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grass.png" />
+        </object-type>
+        <object-type name="Sprite15" sid="527323942163196">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="523742234152959">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="303208984173001" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\grassCliffLeft.png">
+                        <collision-poly>
+                            <point x="0.0285714" y="0.0285714" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.228571" y="0.771429" />
+                            <point x="0.0428571" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16" sid="215055665124894">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="112096543917443">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326719905936032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\bridge.png">
+                        <collision-poly>
+                            <point x="0.714286" y="0.714286" />
+                            <point x="0.285714" y="0.714286" />
+                            <point x="0.971429" y="0.971429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0285714" y="0.971429" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Espinho" sid="750317891387265">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="679692906477429">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Items\spikes.png" />
+        </object-type>
+        <object-type name="TiledBackground18" sid="382866909999087">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\hill_large.png" />
+        </object-type>
+        <object-type name="Sprite17" sid="470161069424671">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="161525595569244">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="910956512143813" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\hill_small.png">
+                        <collision-poly>
+                            <point x="0.145833" y="0.0660377" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854167" y="0.0660377" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite18" sid="430760380538000">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="878123487671750">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="559141826290970">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564247118595351" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno02\Desktop\GameAlienCityTDS04-master\Sprite\kenney-platformer-art-base-pack\Tiles\hill_largeAlt.png">
+                        <collision-poly>
+                            <point x="0.145833" y="0.0479452" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854167" y="0.0479452" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="13" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

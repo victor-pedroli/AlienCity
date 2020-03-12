@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="vida" sid="871610575359056" static="0" type="number">3</variable>
+        <variable constant="0" name="pontos" sid="585853401165794" static="0" type="number">0</variable>
+        <event-block sid="435097193410637">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="983991976705801" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="431969585806097" type="coracao">
+                    <param id="0" name="Pin to">animationhero</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="214671845029198" type="animationhero">
+                    <param id="0" name="Object">heroi</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="681104519868153" type="animationhero">
+                    <param id="0" name="Pin to">heroi</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="906311760986261" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="533497942604215">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="757885793675262" type="heroi">
+                    <param id="0" name="Object">inimigo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="975497514567692" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="973793043561509">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="443187188821879" type="heroi">
+                    <param id="0" name="Object">moeda</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="272372641791923" type="moeda" />
+                <action id="-10" name="Add to" sid="898936045518423" type="System">
+                    <param id="0" name="Variable">pontos</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="498579965025969">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="825226998631542" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="432307862111106" type="placar">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;pontos</param>
+                </action>
+                <action id="5" name="Set frame" sid="743152724476725" type="coracao">
+                    <param id="0" name="Frame number">vida</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="986729560223749">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="794348041348696" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="388807042393517" type="animationhero">
+                    <param id="0" name="Animation">&quot;andando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="927734908872908">
+            <conditions>
+                <condition id="-22" name="Else" sid="799722958064600" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="435675642586114" type="animationhero">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="668058082570580">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="513971877352830" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="506816689282373" type="animationhero">
+                    <param id="0" name="Animation">&quot;pulando&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="468932518935076">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="258253856780967" type="heroi" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="607504562252911" type="animationhero">
+                    <param id="0" name="Animation">&quot;caindo&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="337862101453654">
+            <conditions>
+                <condition id="2" name="Key is down" sid="938744140336739" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="323601692708733" type="animationhero">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="727682976997350">
+            <conditions>
+                <condition id="7" name="On any key released" sid="356051161838293" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="286261811959910" type="animationhero">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="625860025288889">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="611865068711944" type="heroi">
+                    <param id="0" name="Object">Espinho</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="910936453223726" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="149912071060845">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="708056018762977" type="heroi">
+                    <param id="0" name="Object">EspinhoGrande</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="229259359999301" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
